@@ -191,6 +191,14 @@ public class MinHeap {
      * THIS IS YOUR ASSIGNMENT
      */
     private void heapifyUp() {
+        int child = this.usage - 1;
+        int parent = parent(child);
+        //SB: my mind goes immediately to defensive programming for situations like this. Honestly not 100% confident but hopefully this logic makes sense.
+        while (child > 0 && this.underlying[child] < this.underlying[parent]) {
+        swap(parent, child);
+        child = parent;
+        parent = parent(child);
+
     } // method heapifyUp
 
     /**
