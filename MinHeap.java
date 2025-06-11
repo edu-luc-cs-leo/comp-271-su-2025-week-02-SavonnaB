@@ -198,7 +198,7 @@ public class MinHeap {
         swap(parent, child);
         child = parent;
         parent = parent(child);
-
+        }
     } // method heapifyUp
 
     /**
@@ -214,7 +214,7 @@ public class MinHeap {
      * method takes at most log(n) steps where n=this.usage, i.e., the number of
      * used elements in the underlying array.
      */
-    public void heapifyDown(){
+    private void heapifyDown() {
         // Starting point
         int parent = 0;
         // Indices for left and right child and the smallest of them.
